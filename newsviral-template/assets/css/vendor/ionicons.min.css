@@ -1,0 +1,11 @@
+/*!
+ * Ionicons bridge stylesheet for the NewsViral theme.
+ * The original HTML package referenced a local copy of ionicons.min.css,
+ * but the file was missing, which caused the browser to request a non-existent asset
+ * and fall back to an HTML 404 response. That response surfaced as a MIME type error
+ * in the console.
+ *
+ * To keep the original import chain intact and avoid editing the upstream style.css
+ * file, this shim simply re-exports the official CDN stylesheet.
+ */
+@import url('https://unpkg.com/ionicons@4.6.3/dist/css/ionicons.min.css');
