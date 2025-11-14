@@ -120,12 +120,7 @@ if ( ! function_exists( 'newsviral_enqueue_assets' ) ) {
 
         $main_dependencies = array_unique( $main_dependencies );
 
-        wp_enqueue_script( 'newsviral-ionicons-module', 'https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js', [], null, true );
-        wp_script_add_data( 'newsviral-ionicons-module', 'type', 'module' );
-
-        wp_enqueue_script( 'newsviral-ionicons-legacy', 'https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js', [], null, true );
-        wp_script_add_data( 'newsviral-ionicons-legacy', 'nomodule', true );
-
+        wp_enqueue_script( 'newsviral-ionicons', 'https://unpkg.com/ionicons@5.0.0/dist/ionicons.js', [], null, true );
         wp_enqueue_script( 'newsviral-main', $theme_uri . '/assets/js/main.js', $main_dependencies, $version, true );
     }
 }
